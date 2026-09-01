@@ -556,36 +556,48 @@ sufficiently aligned.
 - Required every evaluation field to be populated
 - Preserved multi-part question and edge-case handling
 
-### Validation
+## V4 Validation — Regression Result
 
-Pending deployment and retesting.
+### Test
+The agent was tested on a strong candidate response involving a modified
+binary-tree chain problem.
 
-## V4 Validation — Serialization Test
+### Expected behavior
+A complete evaluation containing strengths, gaps, feedback, assessment,
+one next question, and next difficulty.
+
+### Actual behavior
+The agent generated an incomplete structured JSON response beginning with
+the `strengths` field and stopped before completing the object.
 
 ### Result
-PASS
+FAIL
 
-### Observed behavior
+### Diagnosis
+The agent's underlying technical evaluation remained coherent, but the
+structured JSON output requirement was not reliably completed.
 
-The agent successfully generated a complete structured evaluation
-containing strengths, gaps, feedback, assessment, next question, and
-next difficulty.
+### Decision
+The JSON output schema is being removed in the next iteration. The
+evaluation will instead use a fixed plain-text section format.
 
-The previous V3 behavior of returning only `**` was not reproduced.
+---
 
-### Additional issue identified
+## V5 Planned Improvement
 
-The agent listed "did not provide code or pseudocode" as a gap even
-though the question only requested an approach, complexity analysis,
-and edge cases.
+### Hypothesis
+A simpler natural-language output contract will improve response
+completion reliability while preserving structured evaluation behavior.
 
-This suggests the evaluator may sometimes penalize candidates for
-requirements that were not explicitly requested.
+### Change
+- Revert output schema to `{}`.
+- Remove JSON-only requirements.
+- Require six human-readable evaluation sections.
+- Require every section to contain content.
+- Continue testing multi-part and edge-case questions.
 
-### Next validation
-
-Retest the previously failing complex LCA/BST scenario.
-
+### Validation
+Pending deployment and regression testing.
 ---
 
 # Evaluation Philosophy
