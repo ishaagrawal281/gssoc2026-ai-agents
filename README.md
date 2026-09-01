@@ -23,7 +23,7 @@ The focus is on:
 
 An adaptive technical interviewer for computer science students.
 
-Status: Deployed
+Status: CSE Interview Mentor — deployed and under iterative evaluation
 
 Focus:
 - Technical interview simulation
