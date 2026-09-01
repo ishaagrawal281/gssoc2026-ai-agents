@@ -15,8 +15,10 @@
 - [x] CSE Interview Mentor — v2 deployed
 - [x] CSE Interview Mentor — v3 created
 - [ ] CSE Interview Mentor — output-format validation
-- [ ] Agent 2
-- [ ] Agent 3
+- [x] CSE Interview Mentor — v4 created
+- [x] V4 output completion test
+- [ ] V4 LCA/BST regression test
+- [ ] Finalize CSE Interview Mentor iteration
 
 ## Intelligence Contributions
 
