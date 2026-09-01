@@ -560,6 +560,32 @@ sufficiently aligned.
 
 Pending deployment and retesting.
 
+## V4 Validation — Serialization Test
+
+### Result
+PASS
+
+### Observed behavior
+
+The agent successfully generated a complete structured evaluation
+containing strengths, gaps, feedback, assessment, next question, and
+next difficulty.
+
+The previous V3 behavior of returning only `**` was not reproduced.
+
+### Additional issue identified
+
+The agent listed "did not provide code or pseudocode" as a gap even
+though the question only requested an approach, complexity analysis,
+and edge cases.
+
+This suggests the evaluator may sometimes penalize candidates for
+requirements that were not explicitly requested.
+
+### Next validation
+
+Retest the previously failing complex LCA/BST scenario.
+
 ---
 
 # Evaluation Philosophy
