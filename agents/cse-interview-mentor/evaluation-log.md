@@ -535,6 +535,33 @@ A successful version should:
 
 ---
 
+## V4 Planned Improvement
+
+### Diagnosis
+
+V3 testing identified an output-generation failure. A technically valid
+candidate response resulted in incomplete output (`**`), and the
+Smartly performance panel identified output format as the major gap.
+
+### Hypothesis
+
+The evaluation instructions and structured output schema were not
+sufficiently aligned.
+
+### V4 Change
+
+- Simplified the output schema
+- Aligned the system prompt directly with the schema
+- Required valid JSON output
+- Required every evaluation field to be populated
+- Preserved multi-part question and edge-case handling
+
+### Validation
+
+Pending deployment and retesting.
+
+---
+
 # Evaluation Philosophy
 
 The purpose of this evaluation process is not to make the agent appear
