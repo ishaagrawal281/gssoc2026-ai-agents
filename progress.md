@@ -13,7 +13,8 @@
 
 - [x] CSE Interview Mentor — v1 deployed
 - [x] CSE Interview Mentor — v2 deployed
-- [ ] CSE Interview Mentor — further iteration
+- [x] CSE Interview Mentor — v3 created
+- [ ] CSE Interview Mentor — output-format validation
 - [ ] Agent 2
 - [ ] Agent 3
 
